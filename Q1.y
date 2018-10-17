@@ -12,10 +12,10 @@
  line   : exp '\n'          {printf ("Result is %d\n", $1); return 0;}
         ;
  exp    : number		     {$$ = $1 ;}
- 	| exp ' ' number ' ' '+'     {$$ = $1 + $3 ;}
- 	| exp ' ' number ' ' '-'     {$$ = $1 - $3 ;}
- 	| exp ' ' number ' ' '*'     {$$ = $1 * $3 ;}
- 	| exp ' ' number ' ' '/'     {$$ = $1 / $3 ;}
+ 	| exp ' ' exp ' ' '+'     {$$ = $1 + $3 ;}
+ 	| exp ' ' exp ' ' '-'     {$$ = $1 - $3 ;}
+ 	| exp ' ' exp ' ' '*'     {$$ = $1 * $3 ;}
+ 	| exp ' ' exp ' ' '/'     {$$ = $1 / $3 ;}
 	;
 %%
 
