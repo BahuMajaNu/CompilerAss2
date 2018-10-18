@@ -4,7 +4,8 @@
 
 %%
 
-for 			{return FOR; }
+if			{return IF; }
+else			{return ELSE;}
 [0-9]+                {return number;}
 [\t\n ]               ;	
 [-+*/;\\=\(\)\{\}\>\<]            {return yytext[0];}

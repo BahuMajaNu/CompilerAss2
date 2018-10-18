@@ -3,7 +3,7 @@
 %}
 
 %start start
-%token number,id, FOR
+%token number, id, IF, ELSE
 
 
 %%
@@ -11,12 +11,12 @@
  start 	: stmt '\\'	{printf ("Accepted"); return 0;}
 	;
 
- stmt   : for
+ stmt   : if
 	| exp ';' 
 	| stmt stmt          
         ;
 
- for	: FOR  '(' exp ';' boolexp ';' exp ')' '{' stmt '}'
+ if	: IF  '(' boolexp ')' '{' stmt '}' ELSE '{' stmt '}'
  	;
  
  exp    : number
