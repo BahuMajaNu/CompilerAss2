@@ -23,6 +23,7 @@
 	| id		  
  	| id '=' exp op exp
  	| exp op exp
+	| id '=' exp
 	;
 	
  op	: '+'

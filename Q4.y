@@ -32,6 +32,7 @@
  exp    : number
 	| id		  
  	| id '=' exp op exp
+	| id '=' exp
  	| exp op exp
 	;
 	
